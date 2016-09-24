@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Скобочки задание</title>
+    <meta name="author" content="Stanislav Sivinskiy">
+    <script>
+    function check() {
+        var st = document.getElementById('text').value;
+        var strlen = st.length;
+        var stack = [];
+        var state = 'OK';
+
+        for (i = 0; i < strlen; i++) {
+            switch (st[i]) {
+                case '(':
+                case '[':
+                case '{':
+                    stack.push(st[i]);
+                    break;
+                case ')':
+                    if (stack.length == 0) { state = 'Плохо'; }
+                    if (stack[stack.length - 1] == '(') stack.pop();
+                    break;
+                case ']':
+                    if (stack.length == 0) { state = 'Плохо';}
+                    if (stack[stack.length - 1] == '[') stack.pop();
+                    break;
+                case '}':
+                    if (stack.length == 0) { state = 'Плохо';}
+                    if (stack[stack.length - 1] == '{') stack.pop();
+                    break;
+                default:
+                    state = 'BAD';
+                    alert('Некорректный символ!');
+            }
+
+        }
+
+        if (stack.length == 0 && state == 'OK') {
+            alert('Хорошая строка.');
+        }
+        else {
+            alert('Плохая строка!');
+        }
+        }
+    </script>
+    <style>
+        form {
+            display : block;
+            width : 300px;
+            height : 150px;
+            border : 1px solid #ccc;
+            margin : 0 auto;
+            text-align : center;
+            padding-top : 100px;
+        }
+        body {
+            background-color : #222222;
+            color : #cccccc;
+            font-weight: bold;
+        }
+        #footer {
+            position : absolute;
+            bottom : 0px;
+            left : 0px;
+            text-align : center;
+            display : block;
+            width : 99%;
+            margin-bottom: 15px;
+        }
+        #footer a {
+            width : 100%;
+            color : #ccc;
+            text-decoration : none;
+        }
+        #footer a:hover {
+            text-decoration: underline;
+        }
+</style>
+</head>
+<body>
+<form onsubmit="check()">
+    Введите последовательность скобок:<br/>
+    <input id="text" type="text" value="{[[][]{{}}]}"><br/>
+    <input type="submit" value="Отправить">
+</form>
+<div id="footer">
+    <a href="http://www.google.ru">Автор: Сивинский Станислав</a>
+</div>
+</body>
+</html>
