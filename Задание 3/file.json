@@ -1,0 +1,82 @@
+{
+	"title": "Специальность",
+  	"group": "Группа #####",
+	"people": [{
+		"name": "Эцио Аудиторе",
+	  	"foto": "http://vignette4.wikia.nocookie.net/assassinscreed/images/9/95/The_lovely_young_ezio_auditore_by_nylah22-d5qob8m.jpeg/revision/latest?cb=20130222182301&path-prefix=ru",
+		"data": [{
+			"location": "Assasins Creed",
+		  	"hobby": "Герой игры, любимец женщин и тихий убийца"
+		}]},
+	  {
+		"name": "Вито Скалетта",
+		"foto": "http://vignette2.wikia.nocookie.net/allmafia/images/7/7b/CkhY1MqUUAA7udz.png/revision/latest?cb=20160609195808&path-prefix=ru",
+		"data": [{
+		  "location": "Мафия 2-3",
+		  "hobby": "Гангстер"
+		}]},
+	  {
+		"name": "Джейсон Вурхиз",
+		"foto": "https://upload.wikimedia.org/wikipedia/ru/thumb/d/d0/Jason2.jpg/250px-Jason2.jpg",
+		"data": [{
+		  "location": "Фильм ужасов",
+		  "hobby": "Маньяк самоучка"
+		}]},
+	  {
+		"name": "Хитман",
+		"foto": "https://i.ytimg.com/vi/PXXhsFoEeWY/maxresdefault.jpg",
+		"data": [{
+		  "location": "Хитман Абсолюшн",
+		  "hobby": "Киллер из пробирки"
+		}]},
+	  {
+		"name": "Карл Джонсон",
+		"foto": "https://pp.vk.me/c11115/u168029001/-6/x_22f3fb4e.jpg",
+		"data": [{
+		  "location": "GTA San Andreas",
+		  "hobby": "Герой игры GTA"
+		}]},
+	  {
+		"name": "Бэтмен",
+		"foto": "http://multoigri.ru/images/desc/igri-batmen-01.jpg",
+		"data": [{
+		  "location": "Arkham city",
+		  "hobby": "Герой игры Бэтмен"
+		}]},
+	  {
+		"name": "Гордон Фримен",
+		"foto": "https://upload.wikimedia.org/wikipedia/ru/3/30/Freeman_face_concept.jpeg",
+		"data": [{
+		  "location": "Half Life",
+		  "hobby": "Ученый сантехник"
+		}]},
+	  {
+		"name": "Нико Беллик",
+		"foto": "http://www.nastol.com.ua/pic/201202/1024x1024/nastol.com.ua-15238.jpg",
+		"data": [{
+		  "location": "GTA 4",
+		  "hobby": "Герой игры GTA 4"
+		}]},
+	  {
+		"name": "Франклин",
+		"foto": "http://www.gtafans.ru/sites/default/files/imagepicker/1/gtafans-ru-gta-5-wallpapers-22-1920x1080.jpg",
+		"data": [{
+		  "location": "GTA 5",
+		  "hobby": "Герой игры GTA 5"
+		}]},
+	  {
+		"name": "Майкл Де-Санта",
+		"foto": "http://gta-now.ru/pic/gta5/Michael-GTA-V-photo.jpg",
+		"data": [{
+		  "location": "GTA 5",
+		  "hobby": "Герой игры GTA 5"
+		}]},
+	  {
+		"name": "Тревор",
+		"foto": "http://www.rabstol.net/uploads/gallery/main/63/rabstol_net_grand_theft_auto_v_47.jpg",
+		"data": [{
+		  "location": "GTA 5",
+		  "hobby": "Герой игры GTA 5, Ммм психованный парень, готов плюшевого медведя задрать до смерти)))"
+		}]}
+	]
+}

@@ -1,0 +1,21 @@
+body {
+  background-color: #FCFCFC;
+}
+
+.group_people .people img {
+  height : 180px;
+  max-width : 250px;
+  margin : 0 auto;
+  display : block;
+}
+
+.group_people .people {
+  border : 1px solid #000;
+  margin : 0;
+  display : inline-block;
+  width : 250px;
+}
+
+.group_people .people p {
+  text-align : center;
+}

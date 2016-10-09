@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Stanislav Sivinskiy">
+    <title>JSON test</title>
+    <link rel="stylesheet" href="style-main.css" media="screen">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="file.json"></script>
+    <script>
+      $.getJSON('file.json', function(data) {
+        console.log(data);
+        $('#name_spec').text (data.title);
+        $('#name_group').text (data.group);
+        for (i=0; i<=18; i++) {
+          $html = '';
+          $html += '<div class="people">';
+          $html += '<p>'+(i+1)+")"+data.people[i].name+'</p>';
+          $html += '<img src="'+data.people[i].foto+'"/>';
+          $html += '<p>'+data.people[i].data[0].location+'</p>';
+          $html += '<p>'+data.people[i].data[0].hobby+'</p></div>';
+          $('.group_people').append($html);
+        }
+      });
+    </script>
+  </head>
+  <body>
+  <p id="name_spec"></p>
+  <p id="name_group"></p>
+    <div class="group_people"></div>
+  </body>
+</html>
