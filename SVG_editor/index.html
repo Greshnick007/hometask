@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Stanislav Sivinskiy">
+    <title>SVG-редактор онлайн</title>
+    <link rel="stylesheet" href="main.css" media="screen">
+</head>
+<body>
+<div class="editor ui-widget-content">
+<p>SVG-редактор</p>
+<textarea id="editor">
+        <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+            <ellipse fill="#00FF00" stroke="#000000"
+                     opacity="0.4" stroke-width="5"
+                     cx="30" cy="30"
+                     rx="20" ry="20"/>
+        </svg>
+      </textarea>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script>
+    $(document).ready(() => {
+    background_bg($("#editor").val());
+    $(".editor").draggable();
+
+    $("#editor").keyup(() => {
+        background_bg($("#editor").val());
+    });
+    });
+
+function background_bg(string) {
+    while ((string.indexOf("<")!=-1) || (string.indexOf(">")!=-1) || (string.indexOf("\"")!=-1)) {
+        string = string.replace("<", "%3C");
+        string = string.replace(">", "%3E");
+        string = string.replace("\"", "'");
+        string = string.replace("#", "%23");
+        string = string.replace(/\s{2,}/g, " ");
+    }
+    background = "background-image: url(\"data:image/svg+xml,"+string+"\");";
+    $('body').attr('style', background);
+}
+</script>
+</body>
+</html>
